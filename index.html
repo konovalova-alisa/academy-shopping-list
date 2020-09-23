@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Shopping List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Raleway:100,500,600,800" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header>
+            <h1>The Shopping List</h1>
+        </header>
+
+        <!-- 1. This section contains instructions for the user and the form -->
+        <div id="description">
+            <h4>Enter a grocery item and its price and sort the shopping list by price.</h4>
+        </div>    
+
+        <div class="container">
+        <div id="enter-item" class="one">
+            <form>
+                <input type="text"  placeholder="Name" name="productName"><br>
+        
+                <input type="number"  id="price-input" placeholder="Price" name="productPrice"
+                    step="0.1"> € <br>
+
+                <br><button id="add-item-button">Add item</button>
+                </form>
+            <p><h4>Sort the items:</h4></p>
+            <input type="radio" name="order" value="hight-to-low" checked="true"> Most expensive to cheapest</input><br>
+            <input type="radio" name="order" value="low-to-high"> Cheapest to most expensive</input>
+        </div>
+        
+        <div id ="listing" class="two">
+            <h4 id = "big">So far we have:</h4> 
+            <ul id="list-items"></ul>
+            <p>
+                <div>
+                    <hr id="before-total"></hr>
+                    <h4>Total: </h4>
+                </div>
+                <div id="total-price"></div>
+            </p> <br>
+
+            <button id="remove-all-items">Empty the list</button>
+        </div>
+        </div>   
+    </body>
+    <script src="app.js"></script>  
+</html>
